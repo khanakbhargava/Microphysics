@@ -1,30 +1,33 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Equations of State &mdash; Microphysics  documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/theme_overrides.css?v=2e394b92" />
+
   
-        <script src="_static/jquery.js?v=5d32c60e"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=5929fcd5"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "macros": {"rhozero": "{\\rho_0}", "pizero": "{\\pi_0}", "pizeroone": "{\\pi_0^{(1)}}", "pizerotwo": "{\\pi_0^{(2)}}", "gammabar": "{\\overline{\\Gamma}_1}", "ptl": "{{\\partial}}", "eb": "{{\\bf e}}", "fb": "{{\\bf f}}", "ib": "{{\\bf i}}", "Ub": "{{\\bf U}}", "Vb": "{{\\bf V}}", "xb": "{{\\bf x}}", "ut": "{\\tilde{u}}", "vt": "{\\tilde{v}}", "wt": "{\\tilde{w}}", "Ubt": "{\\widetilde{\\Ub}}", "edge": "{\\rm EDGE}", "mac": "{\\rm MAC}", "trans": "{\\rm TRANS}", "nablab": "{\\mathbf{\\nabla}}", "cdotb": "{\\mathbf{\\cdot}}", "half": "{\\frac{1}{2}}", "myhalf": "{\\frac{1}{2}}", "nph": "{{n + \\myhalf}}", "nmh": "{{n - \\myhalf}}", "Hext": "{{H_{\\rm ext}}}", "Hnuc": "{{H_{\\rm nuc}}}", "kth": "{k_{\\rm th}}", "pred": "{{\\rm pred}}", "Sbar": "{\\overline{S}}", "inp": "{\\mathrm{in}}", "initp": "{\\mathrm{init}}", "outp": "{\\mathrm{out}}", "uadv": "{\\widetilde{\\mathbf{U}}^{\\mathrm{ADV}}}", "uadvone": "{\\widetilde{\\mathbf{U}}^{\\mathrm{ADV},\\star}}", "uadvonedag": "{\\Ubt^{\\mathrm{ADV},\\dagger,\\star}}", "uadvtwo": "{\\widetilde{\\mathbf{U}}^{\\mathrm{ADV}}}", "uadvtwodag": "{\\Ubt^{\\mathrm{ADV},\\dagger}}", "uadvsdcstar": "{\\mathbf{U}^{\\mathrm{ADV},\\star}}", "uadvsdcpred": "{\\mathbf{U}^{\\mathrm{ADV},\\mathrm{pred}}}", "uadvsdc": "{\\mathbf{U}^{\\mathrm{ADV}}}", "dt": "{\\Delta t}", "dr": "{\\Delta r}", "etarho": "{\\eta_{\\rho}}", "etarhoec": "{\\etarho^{\\rm ec}}", "etarhocc": "{\\etarho^{\\rm cc}}", "etarhoflux": "{\\etarho^{\\rm flux}}", "divetarho": "{\\nabla\\cdot(\\etarho\\eb_r)}", "ow": "{\\overline{w}_0}", "dw": "{\\delta w_0}", "thalf": "{\\sfrac{3}{2}}", "rhop": "{{\\rho^{\\prime}}}", "omegadot": "{\\dot{\\omega}}", "er": "{\\mathbf{e}_r}", "ex": "{\\mathbf{e}_x}", "ey": "{\\mathbf{e}_y}", "ez": "{\\mathbf{e}_z}", "Omegab": "{{\\bf \\Omega}}", "rb": "{{\\bf r}}", "isotm": ["{{}^{#2}\\mathrm{#1}}", 2], "edot": "{{{\\dot{e}_\\mathrm{nuc}}}}", "enuc": "{{{{e}_\\mathrm{nuc}}}}", "edotnu": "{{{\\dot{e}_\\nu}}}", "rt": "{\\tilde{r}_0}", "rhob": "{\\ensuremath{\\rho_\\mathrm{base}}}", "Tb": "{\\ensuremath{T_\\mathrm{base}}}", "gcc": "{\\mathrm{g~cm^{-3} }}", "pb": "{p_\\mathrm{base}}", "qburn": "{q_\\mathrm{burn}}", "Uc": "{{\\boldsymbol{\\mathcal{U}}}}", "Fb": "{\\mathbf{F}}", "Sc": "{\\mathbf{S}}", "Shydro": "{{{\\bf S}^{\\mathrm{hydro}}}}", "Rb": "{{\\bf R}}", "Rq": "{{\\bf R}}", "Adv": ["{{\\left [\\boldsymbol{\\mathcal{A}} \\left(#1\\right)\\right]}}", 1], "Advs": ["{{\\boldsymbol{\\mathcal{A}} \\left(#1\\right)}}", 1], "Sdot": "{\\dot{S}}"}}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script>window.MathJax = {"tex": {"inlineMath": [["\\(", "\\)"]], "processEscapes": true, "displayMath": [["\\[", "\\]"]], "macros": {"rhozero": "{\\rho_0}", "pizero": "{\\pi_0}", "pizeroone": "{\\pi_0^{(1)}}", "pizerotwo": "{\\pi_0^{(2)}}", "gammabar": "{\\overline{\\Gamma}_1}", "ptl": "{{\\partial}}", "eb": "{{\\bf e}}", "fb": "{{\\bf f}}", "ib": "{{\\bf i}}", "Ub": "{{\\bf U}}", "Vb": "{{\\bf V}}", "xb": "{{\\bf x}}", "ut": "{\\tilde{u}}", "vt": "{\\tilde{v}}", "wt": "{\\tilde{w}}", "Ubt": "{\\widetilde{\\Ub}}", "edge": "{\\rm EDGE}", "mac": "{\\rm MAC}", "trans": "{\\rm TRANS}", "nablab": "{\\mathbf{\\nabla}}", "cdotb": "{\\mathbf{\\cdot}}", "half": "{\\frac{1}{2}}", "myhalf": "{\\frac{1}{2}}", "nph": "{{n + \\myhalf}}", "nmh": "{{n - \\myhalf}}", "Hext": "{{H_{\\rm ext}}}", "Hnuc": "{{H_{\\rm nuc}}}", "kth": "{k_{\\rm th}}", "pred": "{{\\rm pred}}", "Sbar": "{\\overline{S}}", "inp": "{\\mathrm{in}}", "initp": "{\\mathrm{init}}", "outp": "{\\mathrm{out}}", "uadv": "{\\widetilde{\\mathbf{U}}^{\\mathrm{ADV}}}", "uadvone": "{\\widetilde{\\mathbf{U}}^{\\mathrm{ADV},\\star}}", "uadvonedag": "{\\Ubt^{\\mathrm{ADV},\\dagger,\\star}}", "uadvtwo": "{\\widetilde{\\mathbf{U}}^{\\mathrm{ADV}}}", "uadvtwodag": "{\\Ubt^{\\mathrm{ADV},\\dagger}}", "uadvsdcstar": "{\\mathbf{U}^{\\mathrm{ADV},\\star}}", "uadvsdcpred": "{\\mathbf{U}^{\\mathrm{ADV},\\mathrm{pred}}}", "uadvsdc": "{\\mathbf{U}^{\\mathrm{ADV}}}", "dt": "{\\Delta t}", "dr": "{\\Delta r}", "etarho": "{\\eta_{\\rho}}", "etarhoec": "{\\etarho^{\\rm ec}}", "etarhocc": "{\\etarho^{\\rm cc}}", "etarhoflux": "{\\etarho^{\\rm flux}}", "divetarho": "{\\nabla\\cdot(\\etarho\\eb_r)}", "ow": "{\\overline{w}_0}", "dw": "{\\delta w_0}", "thalf": "{\\sfrac{3}{2}}", "rhop": "{{\\rho^{\\prime}}}", "omegadot": "{\\dot{\\omega}}", "er": "{\\mathbf{e}_r}", "ex": "{\\mathbf{e}_x}", "ey": "{\\mathbf{e}_y}", "ez": "{\\mathbf{e}_z}", "Omegab": "{{\\bf \\Omega}}", "rb": "{{\\bf r}}", "isotm": ["{{}^{#2}\\mathrm{#1}}", 2], "edot": "{{{\\dot{e}_\\mathrm{nuc}}}}", "enuc": "{{{{e}_\\mathrm{nuc}}}}", "edotnu": "{{{\\dot{e}_\\nu}}}", "rt": "{\\tilde{r}_0}", "rhob": "{\\ensuremath{\\rho_\\mathrm{base}}}", "Tb": "{\\ensuremath{T_\\mathrm{base}}}", "gcc": "{\\mathrm{g~cm^{-3} }}", "pb": "{p_\\mathrm{base}}", "qburn": "{q_\\mathrm{burn}}", "Uc": "{{\\boldsymbol{\\mathcal{U}}}}", "Fb": "{\\mathbf{F}}", "Sc": "{\\mathbf{S}}", "Shydro": "{{{\\bf S}^{\\mathrm{hydro}}}}", "Rb": "{{\\bf R}}", "Rbs": ["{{\\bf R} \\left ( #1 \\right )}", 1], "Rq": "{{\\bf R}}", "Adv": ["{{\\left [\\boldsymbol{\\mathcal{A}} \\left(#1\\right)\\right]}}", 1], "Advs": ["{{\\boldsymbol{\\mathcal{A}} \\left(#1\\right)}}", 1], "Sdot": "{\\dot{S}}"}}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Overview of Reaction Networks" href="networks-overview.html" />
-    <link rel="prev" title="BackwardEuler" href="runtime_parameters.html" /> 
+    <link rel="next" title="Transport Coefficients" href="transport.html" />
+    <link rel="prev" title="Parameters by Namespace" href="runtime_parameters.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -51,12 +54,16 @@
     </div>
 
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Microphysics basics</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics.html">StarKiller Basics</a></li>
+              <p class="caption" role="heading"><span class="caption-text">Microphysics overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_structures.html">Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autodiff.html">Automatic Differentiation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rp_intro.html">Runtime parameters</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EOS and transport</span></p>
+<ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Equations of State</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#available-equations-of-state">Available Equations of State</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#gamma-law">gamma_law</a></li>
@@ -69,6 +76,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#interface-and-modes">Interface and Modes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#auxiliary-composition">Auxiliary Composition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#composition-derivatives">Composition Derivatives</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#initialization-and-cutoff-values">Initialization and Cutoff Values</a></li>
@@ -76,16 +84,40 @@
 <li class="toctree-l2"><a class="reference internal" href="#eos-structure">EOS Structure</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="transport.html">Transport Coefficients</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reaction networks</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="networks-overview.html">Overview of Reaction Networks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="networks.html">Available Reaction Networks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="templated_networks.html">Templated Network Righthand Sides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screening.html">Screening of Reaction Rates</a></li>
-<li class="toctree-l1"><a class="reference internal" href="integrators.html">Integrating a Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="neutrinos.html">Neutrino Losses</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ODE integrators</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="integrators.html">Reaction ODE System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ode_integrators.html">ODE Integrators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nse.html">NSE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="transport.html">Transport Coefficients</a></li>
-<li class="toctree-l1"><a class="reference internal" href="unit_tests.html">Unit Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sdc.html">Spectral Deferred Corrections</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Util / external libraries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="util.html">Helper Functions and Libraries</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Unit tests</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="unit_tests.html">Overview of Unit Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comprehensive_tests.html">Comprehensive Unit Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="one_zone_tests.html">One Zone Tests</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="zreferences.html">References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Index</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="genindex.html">Index</a></li>
 </ul>
 
         </div>
@@ -119,7 +151,7 @@ available for your use, and then we describe the correct structure of
 an EOS module in case you want to build your own.</p>
 <section id="available-equations-of-state">
 <h2>Available Equations of State<a class="headerlink" href="#available-equations-of-state" title="Link to this heading"></a></h2>
-<p>The following equations of state are available in Microphysics.
+<p id="index-0">The following equations of state are available in Microphysics.
 Except where noted, each of these EOSs will provide the full
 thermodynamic data (including all derivatives) in the <code class="docutils literal notranslate"><span class="pre">eos_t</span></code>
 type.</p>
@@ -129,28 +161,23 @@ type.</p>
 equation of state:</p>
 <div class="math notranslate nohighlight">
 \[p = (\gamma - 1) \rho e.\]</div>
-<p><span class="math notranslate nohighlight">\(\gamma\)</span> is specified by the runtime parameter <code class="docutils literal notranslate"><span class="pre">eos_gamma</span></code>. For
+<p><span class="math notranslate nohighlight">\(\gamma\)</span> is specified by the runtime parameter <code class="docutils literal notranslate"><span class="pre">eos.eos_gamma</span></code>. For
 an ideal gas, this represents the ratio of specific heats. The gas is
 assumed to be ideal, with the pressure given by</p>
 <div class="math notranslate nohighlight">
 \[p = \frac{\rho k T}{\mu m_u}\]</div>
 <p>where <span class="math notranslate nohighlight">\(k\)</span> is Boltzmann’s constant and <span class="math notranslate nohighlight">\(\mu\)</span> is the mean molecular
 weight, calculated from the composition, <span class="math notranslate nohighlight">\(X_k\)</span>. This EOS assumes
-the gas is either completely neutral (<code class="docutils literal notranslate"><span class="pre">assume_neutral</span> <span class="pre">=</span> <span class="pre">T</span></code>),
+the gas is either completely neutral (<code class="docutils literal notranslate"><span class="pre">eos.assume_neutral</span> <span class="pre">=</span> <span class="pre">1</span></code>),
 giving:</p>
 <div class="math notranslate nohighlight">
 \[\mu^{-1} = \sum_k \frac{X_k}{A_k}\]</div>
-<p>or completely ionized (<code class="docutils literal notranslate"><span class="pre">assume_neutral</span> <span class="pre">=</span> <span class="pre">F</span></code>), giving:</p>
+<p>or completely ionized (<code class="docutils literal notranslate"><span class="pre">eos.assume_neutral</span> <span class="pre">=</span> <span class="pre">0</span></code>), giving:</p>
 <div class="math notranslate nohighlight">
 \[\mu^{-1} = \sum_k \left ( 1 + Z_k \right ) \frac{X_k}{A_k}\]</div>
 <p>The entropy comes from the Sackur-Tetrode equation. Because of the
 complex way that composition enters into the entropy, the entropy
 formulation here is only correct for a <span class="math notranslate nohighlight">\(\gamma = 5/3\)</span> gas.</p>
-<p>Note that the implementation provided in Microphysics is the same as
-the version shipped with MAESTRO, but more general than the
-<code class="docutils literal notranslate"><span class="pre">gamma_law</span></code> EOS provided with CASTRO. CASTRO’s default EOS only
-fills the thermodynamic information in <code class="docutils literal notranslate"><span class="pre">eos_t</span></code> that is required
-by the hydrodynamics module in CASTRO.</p>
 </section>
 <section id="polytrope">
 <h3>polytrope<a class="headerlink" href="#polytrope" title="Link to this heading"></a></h3>
@@ -164,18 +191,18 @@ only independent variable; there is no temperature dependence. The
 user either selects from a set of predefined options reflecting
 physical polytropes (e.g. a non-relativistic, fully degenerate
 electron gas) or inputs their own values for <span class="math notranslate nohighlight">\(K\)</span> and <span class="math notranslate nohighlight">\(\gamma\)</span>
-via <code class="docutils literal notranslate"><span class="pre">polytrope_K</span></code> and <code class="docutils literal notranslate"><span class="pre">polytrope_gamma</span></code>.</p>
-<p>The runtime parameter <code class="docutils literal notranslate"><span class="pre">polytrope_type</span></code> selects the pre-defined
+via <code class="docutils literal notranslate"><span class="pre">eos.polytrope_K</span></code> and <code class="docutils literal notranslate"><span class="pre">eos.polytrope_gamma</span></code>.</p>
+<p>The runtime parameter <code class="docutils literal notranslate"><span class="pre">eos.polytrope_type</span></code> selects the pre-defined
 polytropic relations. The options are:</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">polytrope_type</span> <span class="pre">=</span> <span class="pre">1</span></code>: sets <span class="math notranslate nohighlight">\(\gamma = 5/3\)</span> and</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">eos.polytrope_type</span> <span class="pre">=</span> <span class="pre">1</span></code>: sets <span class="math notranslate nohighlight">\(\gamma = 5/3\)</span> and</p>
 <div class="math notranslate nohighlight">
 \[K = \left ( \frac{3}{\pi} \right)^{2/3} \frac{h^2}{20 m_e m_p^{5/3}} \frac{1}{\mu_e^{5/3}}\]</div>
-<p>where <span class="math notranslate nohighlight">\(mu_e\)</span> is the mean molecular weight per electron, specified via <code class="docutils literal notranslate"><span class="pre">polytrope_mu_e</span></code></p>
+<p>where <span class="math notranslate nohighlight">\(mu_e\)</span> is the mean molecular weight per electron, specified via <code class="docutils literal notranslate"><span class="pre">eos.polytrope_mu_e</span></code></p>
 <p>This is the form appropriate for a non-relativistic
 fully-degenerate electron gas.</p>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">polytrope_type</span> <span class="pre">=</span> <span class="pre">2</span></code>: sets <span class="math notranslate nohighlight">\(\gamma = 4/3\)</span> and</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">eos.polytrope_type</span> <span class="pre">=</span> <span class="pre">2</span></code>: sets <span class="math notranslate nohighlight">\(\gamma = 4/3\)</span> and</p>
 <div class="math notranslate nohighlight">
 \[K = \left ( \frac{3}{\pi} \right)^{1/3} \frac{hc}{8 m_p^{4/3}} \frac{1}{\mu_e^{4/3}}\]</div>
 <p>This is the form appropriate for a relativistic fully-degenerate
@@ -243,11 +270,11 @@ Furthermore, we can show</p>
 <p>This equation of state takes several runtime parameters that can set
 the <span class="math notranslate nohighlight">\(\gamma_i\)</span> for a specific species. The parameters are:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">eos_gamma_default</span></code>: the default <span class="math notranslate nohighlight">\(\gamma\)</span> to apply for all
+<li><p><code class="docutils literal notranslate"><span class="pre">eos.eos_gamma_default</span></code>: the default <span class="math notranslate nohighlight">\(\gamma\)</span> to apply for all
 species</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">species_X_name</span></code> and <code class="docutils literal notranslate"><span class="pre">species_X_gamma</span></code>: set the
+<li><p><code class="docutils literal notranslate"><span class="pre">eos.species_X_name</span></code> and <code class="docutils literal notranslate"><span class="pre">eos.species_X_gamma</span></code>: set the
 <span class="math notranslate nohighlight">\(\gamma_i\)</span> for the species whose name is given as
-<code class="docutils literal notranslate"><span class="pre">species_X_name</span></code> to the value provided by <code class="docutils literal notranslate"><span class="pre">species_X_gamma</span></code>.
+<code class="docutils literal notranslate"><span class="pre">eos.species_X_name</span></code> to the value provided by <code class="docutils literal notranslate"><span class="pre">eos.species_X_gamma</span></code>.
 Here, <code class="docutils literal notranslate"><span class="pre">X</span></code> can be one of the letters: <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, or
 <code class="docutils literal notranslate"><span class="pre">c</span></code>, allowing us to specify custom <span class="math notranslate nohighlight">\(\gamma_i\)</span> for up to three
 different species.</p></li>
@@ -287,7 +314,7 @@ appropriate interpolation table from that site to use this.</p>
 </section>
 <section id="interface-and-modes">
 <h2>Interface and Modes<a class="headerlink" href="#interface-and-modes" title="Link to this heading"></a></h2>
-<p>The EOS is called as:</p>
+<p id="index-1">The EOS is called as:</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">eos</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span><span class="w"> </span><span class="n">eos_type</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -310,6 +337,9 @@ including derivatives.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">eos_re_t</span></code> : only provides the energy-based thermodynamic information, including
 energy derivatives.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">eos_rep_t</span></code> : expands on <code class="docutils literal notranslate"><span class="pre">eos_re_t</span></code> to include pressure information</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eos_rh_t</span></code> : expands on <code class="docutils literal notranslate"><span class="pre">eos_rep_t</span></code> to include enthalpy information</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">chem_eos_t</span></code> : adds some quantities needed for the primordial chemistry EOS
+and explicitly does not include the mass fractions.</p></li>
 </ul>
 <p>In general, you should use the type that has the smallest set of
 information needed, since we optimize out needless quantities at
@@ -323,7 +353,7 @@ stored in <code class="docutils literal notranslate"><span class="pre">eos_t.aux
 </div>
 <section id="auxiliary-composition">
 <span id="aux-eos-comp"></span><h3>Auxiliary Composition<a class="headerlink" href="#auxiliary-composition" title="Link to this heading"></a></h3>
-<p>With <code class="docutils literal notranslate"><span class="pre">USE_AUX_THERMO=TRUE</span></code>, we interpret the composition from the auxiliary variables.
+<p id="index-2">With <code class="docutils literal notranslate"><span class="pre">USE_AUX_THERMO=TRUE</span></code>, we interpret the composition from the auxiliary variables.
 The auxiliary variables are</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">eos_state.aux[iye]</span></code> : electron fraction, defined as</p>
@@ -348,6 +378,16 @@ auxiliary quantities.</p>
 <p>The equation of state also needs <span class="math notranslate nohighlight">\(\bar{Z}\)</span> which is easily computed as</p>
 <div class="math notranslate nohighlight">
 \[\bar{Z} = \bar{A} Y_e\]</div>
+</section>
+<section id="composition-derivatives">
+<h3>Composition Derivatives<a class="headerlink" href="#composition-derivatives" title="Link to this heading"></a></h3>
+<p id="index-3">The derivatives <span class="math notranslate nohighlight">\(\partial p/\partial A\)</span>, <span class="math notranslate nohighlight">\(\partial p/\partial Z\)</span>,
+and <span class="math notranslate nohighlight">\(\partial e/\partial A\)</span>, <span class="math notranslate nohighlight">\(\partial e/\partial Z\)</span> are available via
+the <code class="docutils literal notranslate"><span class="pre">eos_extra_t</span></code>, <code class="docutils literal notranslate"><span class="pre">eos_re_extra_t</span></code>, <code class="docutils literal notranslate"><span class="pre">eos_rep_extra_t</span></code>, which
+extends the non-“extra” variants with these additional fields.</p>
+<p>The composition derivatives can be used via the <code class="docutils literal notranslate"><span class="pre">composition_derivatives()</span></code> function
+in <code class="docutils literal notranslate"><span class="pre">eos_composition.H</span></code>
+to compute <span class="math notranslate nohighlight">\(\partial p/\partial X_k |_{\rho, T, X_j}\)</span>, <span class="math notranslate nohighlight">\(\partial e/\partial X_k |_{\rho, T, X_j}\)</span>, and <span class="math notranslate nohighlight">\(\partial h/\partial X_k |_{\rho, T, X_j}\)</span>.</p>
 </section>
 </section>
 <section id="initialization-and-cutoff-values">
@@ -382,14 +422,14 @@ accept an eos_input and an eos_t state; see Section <a class="reference internal
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="runtime_parameters.html" class="btn btn-neutral float-left" title="BackwardEuler" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="networks-overview.html" class="btn btn-neutral float-right" title="Overview of Reaction Networks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="runtime_parameters.html" class="btn btn-neutral float-left" title="Parameters by Namespace" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="transport.html" class="btn btn-neutral float-right" title="Transport Coefficients" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2012, Microphysics Development Team.</p>
+    <p>&#169; Copyright 2024, Microphysics Development Team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

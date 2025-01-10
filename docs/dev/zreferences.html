@@ -1,27 +1,30 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>References &mdash; Microphysics  documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/theme_overrides.css?v=2e394b92" />
+
   
-        <script src="_static/jquery.js?v=5d32c60e"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=5929fcd5"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Spectral Deferred Corrections" href="sdc.html" /> 
+    <link rel="prev" title="One Zone Tests" href="one_zone_tests.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,23 +51,51 @@
     </div>
 
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Microphysics basics</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics.html">StarKiller Basics</a></li>
+              <p class="caption" role="heading"><span class="caption-text">Microphysics overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_structures.html">Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autodiff.html">Automatic Differentiation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rp_intro.html">Runtime parameters</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EOS and transport</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="eos.html">Equations of State</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transport.html">Transport Coefficients</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reaction networks</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="networks-overview.html">Overview of Reaction Networks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="networks.html">Available Reaction Networks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="templated_networks.html">Templated Network Righthand Sides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screening.html">Screening of Reaction Rates</a></li>
-<li class="toctree-l1"><a class="reference internal" href="integrators.html">Integrating a Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="neutrinos.html">Neutrino Losses</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ODE integrators</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="integrators.html">Reaction ODE System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ode_integrators.html">ODE Integrators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nse.html">NSE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="transport.html">Transport Coefficients</a></li>
-<li class="toctree-l1"><a class="reference internal" href="unit_tests.html">Unit Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sdc.html">Spectral Deferred Corrections</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Util / external libraries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="util.html">Helper Functions and Libraries</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Unit tests</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="unit_tests.html">Overview of Unit Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comprehensive_tests.html">Comprehensive Unit Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="one_zone_tests.html">One Zone Tests</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Index</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="genindex.html">Index</a></li>
 </ul>
 
         </div>
@@ -94,6 +125,7 @@
   <section id="references">
 <h1>References<a class="headerlink" href="#references" title="Link to this heading"></a></h1>
 <div class="docutils container" id="id1">
+<div role="list" class="citation-list">
 <div class="citation" id="id26" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>BBH89<span class="fn-bracket">]</span></span>
 <p>P. N. Brown, G. D. Byrne, and A. C. Hindmarsh. VODE: a variable coefficient ode solver. <em>SIAM J. Sci. Stat. Comput.</em>, 10:1038–1051, 1989.</p>
@@ -114,9 +146,17 @@
 <span class="label"><span class="fn-bracket">[</span>GH13<span class="fn-bracket">]</span></span>
 <p>M W Guidry and J A Harris. Explicit integration of extremely stiff reaction networks: quasi-steady-state methods. <em>Computational Science &amp; Discovery</em>, 6(1):015002, jan 2013. URL: <a class="reference external" href="https://dx.doi.org/10.1088/1749-4699/6/1/015002">https://dx.doi.org/10.1088/1749-4699/6/1/015002</a>, <a class="reference external" href="https://doi.org/10.1088/1749-4699/6/1/015002">doi:10.1088/1749-4699/6/1/015002</a>.</p>
 </div>
+<div class="citation" id="id48" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>LMP01<span class="fn-bracket">]</span></span>
+<p>K. LANGANKE and G. MARTÍNEZ-PINEDO. Rate tables for the weak processes of pf-shell nuclei in stellar environments. <em>Atomic Data and Nuclear Data Tables</em>, 79(1):1–46, 2001. <a class="reference external" href="https://doi.org/https://doi.org/10.1006/adnd.2001.0865">doi:https://doi.org/10.1006/adnd.2001.0865</a>.</p>
+</div>
+<div class="citation" id="id45" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Lea18<span class="fn-bracket">]</span></span>
+<p>Allan M. M. Leal. Autodiff, a modern, fast and expressive C++ library for automatic differentiation. \texttt https://autodiff.github.io, 2018. URL: <a class="reference external" href="https://autodiff.github.io">https://autodiff.github.io</a>.</p>
+</div>
 <div class="citation" id="id37" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>MOvanLeer00<span class="fn-bracket">]</span></span>
-<p>David R. Mott, Elaine S. Oran, and Bram van Leer. A quasi-steady-state solver for the stiff ordinary differential equations of reaction kinetics. <em>Journal of Computational Physics</em>, 164(2):407–428, 2000. URL: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0021999100966051">https://www.sciencedirect.com/science/article/pii/S0021999100966051</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1006/jcph.2000.6605">doi:https://doi.org/10.1006/jcph.2000.6605</a>.</p>
+<p>David R. Mott, Elaine S. Oran, and Bram van Leer. A quasi-steady-state solver for the stiff ordinary differential equations of reaction kinetics. <em>Journal of Computational Physics</em>, 164(2):407–428, 2000. <a class="reference external" href="https://doi.org/https://doi.org/10.1006/jcph.2000.6605">doi:https://doi.org/10.1006/jcph.2000.6605</a>.</p>
 </div>
 <div class="citation" id="id44" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>SSV98<span class="fn-bracket">]</span></span>
@@ -125,6 +165,10 @@
 <div class="citation" id="id41" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>ZKNR22<span class="fn-bracket">]</span></span>
 <p>M. Zingale, M. P. Katz, A. Nonaka, and M. Rasmussen. An improved method for coupling hydrodynamics with astrophysical reaction networks. <em>The Astrophysical Journal</em>, 936(1):6, aug 2022. URL: <a class="reference external" href="https://dx.doi.org/10.3847/1538-4357/ac8478">https://dx.doi.org/10.3847/1538-4357/ac8478</a>, <a class="reference external" href="https://doi.org/10.3847/1538-4357/ac8478">doi:10.3847/1538-4357/ac8478</a>.</p>
+</div>
+<div class="citation" id="id47" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>ZCJ+24<span class="fn-bracket">]</span></span>
+<p>Michael Zingale, Zhi Chen, Eric T. Johnson, Max P. Katz, and Alexander Smith Clark. Strong coupling of hydrodynamics and reactions in nuclear statistical equilibrium for modeling convection in massive stars. <em>The Astrophysical Journal</em>, 977(1):30, nov 2024. URL: <a class="reference external" href="https://dx.doi.org/10.3847/1538-4357/ad8a66">https://dx.doi.org/10.3847/1538-4357/ad8a66</a>, <a class="reference external" href="https://doi.org/10.3847/1538-4357/ad8a66">doi:10.3847/1538-4357/ad8a66</a>.</p>
 </div>
 <div class="citation" id="id31" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>AlastueyJancovici78<span class="fn-bracket">]</span></span>
@@ -154,6 +198,10 @@
 <span class="label"><span class="fn-bracket">[</span>ItohTotsujiIchimaruDewitt79<span class="fn-bracket">]</span></span>
 <p>N. Itoh, H. Totsuji, S. Ichimaru, and H. E. Dewitt. Enhancement of thermonuclear reaction rate due to strong screening. II - Ionic mixtures. <em>\apj </em>, 234:1079–1084, December 1979. <a class="reference external" href="https://doi.org/10.1086/157590">doi:10.1086/157590</a>.</p>
 </div>
+<div class="citation" id="id49" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>ItohHayashiNishikawaKohyama96<span class="fn-bracket">]</span></span>
+<p>Naoki Itoh, Hiroshi Hayashi, Akinori Nishikawa, and Yasuharu Kohyama. Neutrino Energy Loss in Stellar Interiors. VII. Pair, Photo-, Plasma, Bremsstrahlung, and Recombination Neutrino Processes. <em>\apjs </em>, 102:411, February 1996. <a class="reference external" href="https://doi.org/10.1086/192264">doi:10.1086/192264</a>.</p>
+</div>
 <div class="citation" id="id39" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Jancovici77<span class="fn-bracket">]</span></span>
 <p>B. Jancovici. Pair correlation function in a dense plasma and pycnonuclear reactions in stars. <em>Journal of Statistical Physics</em>, 17(5):357–370, November 1977. <a class="reference external" href="https://doi.org/10.1007/BF01014403">doi:10.1007/BF01014403</a>.</p>
@@ -166,13 +214,13 @@
 <span class="label"><span class="fn-bracket">[</span>MaloneZingaleNonaka+14<span class="fn-bracket">]</span></span>
 <p>C. M. Malone, M. Zingale, A. Nonaka, A. S. Almgren, and J. B. Bell. Multidimensional Modeling of Type I X-Ray Bursts. II. Two-dimensional Convection in a Mixed H/He Accretor. <em>\apj </em>, 788:115, June 2014. <a class="reference external" href="https://arxiv.org/abs/1404.6286">arXiv:1404.6286</a>, <a class="reference external" href="https://doi.org/10.1088/0004-637X/788/2/115">doi:10.1088/0004-637X/788/2/115</a>.</p>
 </div>
-<div class="citation" id="id29" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>MaWoosleyMalone+13<span class="fn-bracket">]</span></span>
-<p>H. Ma, S. E. Woosley, C. M. Malone, A. Almgren, and J. Bell. Carbon Deflagration in Type Ia Supernova. I. Centrally Ignited Models. <em>\apj </em>, 771(1):58, jul 2013. <a class="reference external" href="https://arxiv.org/abs/1305.2433">arXiv:1305.2433</a>, <a class="reference external" href="https://doi.org/10.1088/0004-637X/771/1/58">doi:10.1088/0004-637X/771/1/58</a>.</p>
-</div>
 <div class="citation" id="id27" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>ShenBildsten09<span class="fn-bracket">]</span></span>
 <p>K. J. Shen and L. Bildsten. Unstable Helium Shell Burning on Accreting White Dwarfs. <em>\apj </em>, 699:10, March 2009. <a class="reference external" href="https://arxiv.org/abs/0903.0654v2">arXiv:0903.0654v2</a>.</p>
+</div>
+<div class="citation" id="id46" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Timmes00<span class="fn-bracket">]</span></span>
+<p>F. X. Timmes. Physical Properties of Laminar Helium Deflagrations. <em>APJ</em>, 528(2):913–945, January 2000. <a class="reference external" href="https://doi.org/10.1086/308203">doi:10.1086/308203</a>.</p>
 </div>
 <div class="citation" id="id11" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>TimmesArnett99<span class="fn-bracket">]</span></span>
@@ -198,6 +246,10 @@
 <span class="label"><span class="fn-bracket">[</span>ZingaleAlmgrenBell+09<span class="fn-bracket">]</span></span>
 <p>M. Zingale, A. S. Almgren, J. B. Bell, A. Nonaka, and S. E. Woosley. Low Mach Number Modeling of Type IA Supernovae. IV. White Dwarf Convection. <em>\apj </em>, 704:196–210, October 2009. <a class="reference external" href="https://arxiv.org/abs/0908.2668">arXiv:0908.2668</a>, <a class="reference external" href="https://doi.org/10.1088/0004-637X/704/1/196">doi:10.1088/0004-637X/704/1/196</a>.</p>
 </div>
+<div class="citation" id="id28" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>ZingaleKatzBell+19<span class="fn-bracket">]</span></span>
+<p>M. Zingale, M. P. Katz, J. B. Bell, M. L. Minion, A. J. Nonaka, and W. Zhang. Improved Coupling of Hydrodynamics and Nuclear Reactions via Spectral Deferred Corrections. <em>arXiv e-prints</em>, pages arXiv:1908.03661, Aug 2019. <a class="reference external" href="https://arxiv.org/abs/1908.03661">arXiv:1908.03661</a>.</p>
+</div>
 <div class="citation" id="id21" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>ZingaleMaloneNonaka+15<span class="fn-bracket">]</span></span>
 <p>M. Zingale, C. M. Malone, A. Nonaka, A. S. Almgren, and J. B. Bell. Comparisons of Two- and Three-Dimensional Convection in Type I X-Ray Bursts. <em>\apj </em>, 807:60, July 2015. <a class="reference external" href="https://arxiv.org/abs/1410.5796">arXiv:1410.5796</a>, <a class="reference external" href="https://doi.org/10.1088/0004-637X/807/1/60">doi:10.1088/0004-637X/807/1/60</a>.</p>
@@ -214,13 +266,13 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="sdc.html" class="btn btn-neutral float-left" title="Spectral Deferred Corrections" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="one_zone_tests.html" class="btn btn-neutral float-left" title="One Zone Tests" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2012, Microphysics Development Team.</p>
+    <p>&#169; Copyright 2024, Microphysics Development Team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
