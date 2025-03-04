@@ -55,18 +55,20 @@
               <p class="caption" role="heading"><span class="caption-text">Microphysics overview</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#standalone">Standalone</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#running-with-amrex-application-code">Running with AMReX Application Code</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="design.html">Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_structures.html">Data Structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="autodiff.html">Automatic Differentiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build_system.html">Build System</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rp_intro.html">Runtime parameters</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">EOS and transport</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="eos.html">Equations of State</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eos_implementations.html">Available Equations of State</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transport.html">Transport Coefficients</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Reaction networks</span></p>
@@ -87,15 +89,19 @@
 <p class="caption" role="heading"><span class="caption-text">Util / external libraries</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="util.html">Helper Functions and Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autodiff.html">Automatic Differentiation</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Unit tests</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="unit_tests.html">Overview of Unit Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit_test_runtime_parameters.html">Unit Test Common Runtime Parameters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="comprehensive_tests.html">Comprehensive Unit Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="one_zone_tests.html">One Zone Tests</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="citing.html">Citing Microphysics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changes.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="zreferences.html">References</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Index</span></p>
@@ -129,6 +135,27 @@
              
   <section id="getting-started">
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h1>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h2>
+<p>Microphysics requires</p>
+<ul class="simple">
+<li><p>A C++17 or later compilers</p></li>
+<li><p>AMReX (<a class="reference external" href="https://github.com/amrex-codes/amrex">https://github.com/amrex-codes/amrex</a>)</p></li>
+<li><p>python (&gt;= 3.10)</p></li>
+<li><p>GNU make</p></li>
+</ul>
+<p>optional dependencies are:</p>
+<ul class="simple">
+<li><p>CUDA (&gt;= 11)</p></li>
+<li><p>ROCm (&gt;= 6.3.1 — earlier versions have register allocation bugs)</p></li>
+</ul>
+<p>Microphysics is meant to be compiled into an application code as part
+of its build process, with the network, EOS, integrator, and more
+picked at compile time.  As such, there is not a single library that
+can be built and linked against.</p>
+<p>Below we describe how to use Microphysics in a “standalone” fashion,
+using the provided unit tests, and as part of an application code.</p>
+</section>
 <section id="standalone">
 <h2>Standalone<a class="headerlink" href="#standalone" title="Link to this heading"></a></h2>
 <p id="index-0">Microphysics can be used in a “standalone” fashion to run the unit
@@ -144,22 +171,33 @@ to set the <code class="docutils literal notranslate"><span class="pre">AMREX_HO
 <code class="docutils literal notranslate"><span class="pre">amrex/</span></code> directory:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1"><span class="nb">export</span><span class="w"> </span><span class="nv">AMREX_HOME</span><span class="o">=</span>/path/to/amrex</span>
 </pre></div></div><p>(where you change <code class="docutils literal notranslate"><span class="pre">/path/to/amrex</span></code> to your actual path).</p>
-<p id="index-1">A good unit test to start with is <code class="docutils literal notranslate"><span class="pre">burn_cell</span></code> – this is simply a
+<p id="index-1">A good unit test to start with is <code class="docutils literal notranslate"><span class="pre">burn_cell</span></code> — this is simply a
 one-zone burn.  In <code class="docutils literal notranslate"><span class="pre">Microphysics/</span></code> do:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1"><span class="nb">cd</span><span class="w"> </span>unit_test/burn_cell</span>
 <span class="prompt1">make</span>
-</pre></div></div><p>This will create an executable called <code class="docutils literal notranslate"><span class="pre">main3d.gnu.ex</span></code>.  Then you can run it as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1">./main3d.gnu.ex<span class="w"> </span>inputs_aprox21</span>
-</pre></div></div><p>By default, the test is built with the 21-isotope <code class="docutils literal notranslate"><span class="pre">aprox21</span></code> network.
-Here <code class="docutils literal notranslate"><span class="pre">inputs_aprox21</span></code> is the inputs file that sets options.</p>
+</pre></div></div><p>This will create an executable called <code class="docutils literal notranslate"><span class="pre">main3d.gnu.ex</span></code>.
+By default, the test is built with the 13-isotope <code class="docutils literal notranslate"><span class="pre">aprox13</span></code> network,
+<code class="docutils literal notranslate"><span class="pre">helmholtz</span></code> EOS, and VODE integrator.</p>
+<p>Then you can run it as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1">./main3d.gnu.ex<span class="w"> </span>inputs_aprox13</span>
+</pre></div></div><p>Here <code class="docutils literal notranslate"><span class="pre">inputs_aprox13</span></code> is the inputs file that sets options.</p>
+<p>This will output information about the starting and final state to the
+terminal and produce a file <code class="docutils literal notranslate"><span class="pre">state_over_time.txt</span></code> that contains the
+thermodynamic history at different points in time.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See the <a class="reference internal" href="burn_cell.html#sec-burn-cell"><span class="std std-ref">burn_cell</span></a> documentation for more details on this
+unit test and how to visualize the output.</p>
+</div>
 </section>
 <section id="running-with-amrex-application-code">
 <h2>Running with AMReX Application Code<a class="headerlink" href="#running-with-amrex-application-code" title="Link to this heading"></a></h2>
-<p id="index-2">Getting started with Microphysics using either CASTRO or MAESTROeX is
+<p id="index-2">Getting started with Microphysics using either <a class="reference external" href="https://amrex-astro.github.io/Castro/docs/index.html">CASTRO</a> or <a class="reference external" href="https://amrex-astro.github.io/MAESTROeX/docs/index.html">MAESTROeX</a> is
 straightforward. Because the modules here are already in a format that
 the AMReX codes understand, you only need to provide to the code
 calling these routines their location on your system. The code will do
-the rest. To do so, define the <code class="docutils literal notranslate"><span class="pre">MICROPHYSICS_HOME</span></code> environment
+the rest.</p>
+<p>First we need to define the <code class="docutils literal notranslate"><span class="pre">MICROPHYSICS_HOME</span></code> environment
 variable, either at a command line or (if you use the bash shell)
 through your <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>, e.g.:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">MICROPHYSICS_HOME</span><span class="o">=</span>/path/to/Microphysics
@@ -171,9 +209,7 @@ rely on the Microphysics <code class="docutils literal notranslate"><span class=
 (found via the <code class="docutils literal notranslate"><span class="pre">MICROPHYSICS_HOME</span></code> variable) to add the necessary
 source to the build.  All of the interfaces that these codes use
 are found in <code class="docutils literal notranslate"><span class="pre">Microphysics/interfaces/</span></code>.</p>
-<p>Other codes can use Microphysics in the same fashion.  Unit tests in
-<code class="docutils literal notranslate"><span class="pre">Microphysics/unit_test/</span></code> provide some examples of using the
-interfaces.</p>
+<p>Other AMReX-based codes can use Microphysics in the same fashion.</p>
 </section>
 </section>
 

@@ -26,7 +26,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Automatic Differentiation" href="autodiff.html" />
+    <link rel="next" title="Build System" href="build_system.html" />
     <link rel="prev" title="Design" href="design.html" /> 
 </head>
 
@@ -73,12 +73,13 @@
 <li class="toctree-l2"><a class="reference internal" href="#converting-between-types">Converting Between Types</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="autodiff.html">Automatic Differentiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build_system.html">Build System</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rp_intro.html">Runtime parameters</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">EOS and transport</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="eos.html">Equations of State</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eos_implementations.html">Available Equations of State</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transport.html">Transport Coefficients</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Reaction networks</span></p>
@@ -99,15 +100,19 @@
 <p class="caption" role="heading"><span class="caption-text">Util / external libraries</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="util.html">Helper Functions and Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autodiff.html">Automatic Differentiation</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Unit tests</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="unit_tests.html">Overview of Unit Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit_test_runtime_parameters.html">Unit Test Common Runtime Parameters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="comprehensive_tests.html">Comprehensive Unit Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="one_zone_tests.html">One Zone Tests</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="citing.html">Citing Microphysics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changes.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="zreferences.html">References</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Index</span></p>
@@ -167,7 +172,7 @@ network, and they will come in through the <code class="docutils literal notrans
 <p>There is a lot more information that can be saved here, such as the
 partial derivatives of the thermodynamic state variables with respect
 to each other. To see a complete list, examine the <code class="docutils literal notranslate"><span class="pre">eos_type.H</span></code>
-file: <code class="docutils literal notranslate"><span class="pre">Castro/Microphysics/interfaces/eos_type.H</span></code>.</p>
+file.</p>
 </section>
 </section>
 <section id="networks">
@@ -222,12 +227,25 @@ also defines integer indices into the solution vector that can be used
 to access the different components of the state:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">neqs</span></code> : the total number of variables we are integrating.</p>
-<blockquote>
-<div><p>It is assumed that the first <code class="docutils literal notranslate"><span class="pre">nspec</span></code> are the species.</p>
-</div></blockquote>
+<p>It is assumed that the first <code class="docutils literal notranslate"><span class="pre">nspec</span></code> are the species.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">net_ienuc</span></code> : the index of the specific internal energy in the solution vector</p></li>
 </ul>
+<p>For <a class="reference internal" href="sdc.html#sdc-evolution"><span class="std std-ref">Spectral Deferred Corrections</span></a>, it also defines integer indices for the
+<code class="docutils literal notranslate"><span class="pre">burn_t</span> <span class="pre">y[]</span></code> array:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SFS</span></code>:  the first species</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SEINT</span></code> the energy</p></li>
+</ul>
+<p>and then a number of components that are not evolved:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SRHO</span></code> density</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SMX</span></code>, <code class="docutils literal notranslate"><span class="pre">SMY</span></code>, <code class="docutils literal notranslate"><span class="pre">SMZ</span></code> : the momenta</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SEDEN</span></code> : the total energy density</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SFX</span></code> : the first auxiliary quantity</p></li>
+</ul>
+<p>with the total number of state variables <code class="docutils literal notranslate"><span class="pre">SVAR</span></code> and the number of evolved
+variables <code class="docutils literal notranslate"><span class="pre">SVAR_EVOLVE</span></code>.</p>
 </section>
 </section>
 <section id="integrators">
@@ -255,7 +273,7 @@ thermodynamic information by calling the EOS.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="design.html" class="btn btn-neutral float-left" title="Design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="autodiff.html" class="btn btn-neutral float-right" title="Automatic Differentiation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="build_system.html" class="btn btn-neutral float-right" title="Build System" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
