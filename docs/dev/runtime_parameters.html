@@ -19,12 +19,12 @@
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/copybutton.js?v=eaa7b67c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Equations of State" href="eos.html" />
+    <link rel="next" title="Fundamental Constants" href="fundamental_constants.html" />
     <link rel="prev" title="Runtime parameters" href="rp_intro.html" /> 
 </head>
 
@@ -74,6 +74,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="fundamental_constants.html">Fundamental Constants</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">EOS and transport</span></p>
 <ul>
@@ -1665,7 +1666,7 @@ formation)</p></td>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">include_recomb</span></code></p></td>
 <td></td>
-<td><p>1</p></td>
+<td><p>0</p></td>
 </tr>
 </tbody>
 </table>
@@ -2066,7 +2067,7 @@ initial molar fraction check.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">tmax</span></code></p></td>
 <td><p>the final time to integrate to</p></td>
-<td><p>1.e3</p></td>
+<td><p>1.e-1</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tfirst</span></code></p></td>
 <td><p>first output time – we will output in nsteps
@@ -2077,29 +2078,21 @@ logarithmically spaced steps between [tfirst, tmax]</p></td>
 <td><p>number of steps (logarithmically spaced)</p></td>
 <td><p>100</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">rho_min</span></code></p></td>
-<td></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">rho</span></code></p></td>
+<td><p>density</p></td>
 <td><p>1.e7</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">rho_max</span></code></p></td>
-<td></td>
-<td><p>1.e9</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">nrho</span></code></p></td>
-<td></td>
-<td><p>4</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">T_min</span></code></p></td>
-<td></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">T</span></code></p></td>
+<td><p>temperature</p></td>
 <td><p>6.e9</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">T_max</span></code></p></td>
-<td></td>
-<td><p>8.e9</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mu_p</span></code></p></td>
+<td><p>Initial guess for proton chemical potential</p></td>
+<td><p>-3.0</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">nT</span></code></p></td>
-<td></td>
-<td><p>4</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mu_n</span></code></p></td>
+<td><p>Initial guess for neutron chemical potential</p></td>
+<td><p>-12.0</p></td>
 </tr>
 </tbody>
 </table>
@@ -2899,10 +2892,6 @@ as given in the inputs?</p></td>
 <td></td>
 <td><p>1.e12</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">metalicity_max</span></code></p></td>
-<td></td>
-<td><p>0.1e0</p></td>
-</tr>
 </tbody>
 </table>
 <p><strong>unit_test/test_jac:</strong></p>
@@ -3332,13 +3321,13 @@ as given in the inputs?</p></td>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="rp_intro.html" class="btn btn-neutral float-left" title="Runtime parameters" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="eos.html" class="btn btn-neutral float-right" title="Equations of State" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="fundamental_constants.html" class="btn btn-neutral float-right" title="Fundamental Constants" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, Microphysics Development Team.</p>
+    <p>&#169; Copyright 2025, Microphysics Development Team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

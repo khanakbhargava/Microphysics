@@ -19,7 +19,7 @@
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/copybutton.js?v=eaa7b67c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
       <script>window.MathJax = {"tex": {"inlineMath": [["\\(", "\\)"]], "processEscapes": true, "displayMath": [["\\[", "\\]"]], "macros": {"rhozero": "{\\rho_0}", "pizero": "{\\pi_0}", "pizeroone": "{\\pi_0^{(1)}}", "pizerotwo": "{\\pi_0^{(2)}}", "gammabar": "{\\overline{\\Gamma}_1}", "ptl": "{{\\partial}}", "eb": "{{\\bf e}}", "fb": "{{\\bf f}}", "ib": "{{\\bf i}}", "Ub": "{{\\bf U}}", "Vb": "{{\\bf V}}", "xb": "{{\\bf x}}", "ut": "{\\tilde{u}}", "vt": "{\\tilde{v}}", "wt": "{\\tilde{w}}", "Ubt": "{\\widetilde{\\Ub}}", "edge": "{\\rm EDGE}", "mac": "{\\rm MAC}", "trans": "{\\rm TRANS}", "nablab": "{\\mathbf{\\nabla}}", "cdotb": "{\\mathbf{\\cdot}}", "half": "{\\frac{1}{2}}", "myhalf": "{\\frac{1}{2}}", "nph": "{{n + \\myhalf}}", "nmh": "{{n - \\myhalf}}", "Hext": "{{H_{\\rm ext}}}", "Hnuc": "{{H_{\\rm nuc}}}", "kth": "{k_{\\rm th}}", "pred": "{{\\rm pred}}", "Sbar": "{\\overline{S}}", "inp": "{\\mathrm{in}}", "initp": "{\\mathrm{init}}", "outp": "{\\mathrm{out}}", "uadv": "{\\widetilde{\\mathbf{U}}^{\\mathrm{ADV}}}", "uadvone": "{\\widetilde{\\mathbf{U}}^{\\mathrm{ADV},\\star}}", "uadvonedag": "{\\Ubt^{\\mathrm{ADV},\\dagger,\\star}}", "uadvtwo": "{\\widetilde{\\mathbf{U}}^{\\mathrm{ADV}}}", "uadvtwodag": "{\\Ubt^{\\mathrm{ADV},\\dagger}}", "uadvsdcstar": "{\\mathbf{U}^{\\mathrm{ADV},\\star}}", "uadvsdcpred": "{\\mathbf{U}^{\\mathrm{ADV},\\mathrm{pred}}}", "uadvsdc": "{\\mathbf{U}^{\\mathrm{ADV}}}", "dt": "{\\Delta t}", "dr": "{\\Delta r}", "etarho": "{\\eta_{\\rho}}", "etarhoec": "{\\etarho^{\\rm ec}}", "etarhocc": "{\\etarho^{\\rm cc}}", "etarhoflux": "{\\etarho^{\\rm flux}}", "divetarho": "{\\nabla\\cdot(\\etarho\\eb_r)}", "ow": "{\\overline{w}_0}", "dw": "{\\delta w_0}", "thalf": "{\\sfrac{3}{2}}", "rhop": "{{\\rho^{\\prime}}}", "omegadot": "{\\dot{\\omega}}", "er": "{\\mathbf{e}_r}", "ex": "{\\mathbf{e}_x}", "ey": "{\\mathbf{e}_y}", "ez": "{\\mathbf{e}_z}", "Omegab": "{{\\bf \\Omega}}", "rb": "{{\\bf r}}", "isotm": ["{{}^{#2}\\mathrm{#1}}", 2], "edot": "{{{\\dot{e}_\\mathrm{nuc}}}}", "enuc": "{{{{e}_\\mathrm{nuc}}}}", "edotnu": "{{{\\dot{e}_\\nu}}}", "rt": "{\\tilde{r}_0}", "rhob": "{\\ensuremath{\\rho_\\mathrm{base}}}", "Tb": "{\\ensuremath{T_\\mathrm{base}}}", "gcc": "{\\mathrm{g~cm^{-3} }}", "pb": "{p_\\mathrm{base}}", "qburn": "{q_\\mathrm{burn}}", "Uc": "{{\\boldsymbol{\\mathcal{U}}}}", "Fb": "{\\mathbf{F}}", "Sc": "{\\mathbf{S}}", "Shydro": "{{{\\bf S}^{\\mathrm{hydro}}}}", "Rb": "{{\\bf R}}", "Rbs": ["{{\\bf R} \\left ( #1 \\right )}", 1], "Rq": "{{\\bf R}}", "Adv": ["{{\\left [\\boldsymbol{\\mathcal{A}} \\left(#1\\right)\\right]}}", 1], "Advs": ["{{\\boldsymbol{\\mathcal{A}} \\left(#1\\right)}}", 1], "Sdot": "{\\dot{S}}"}}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
       <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -61,6 +61,7 @@
 <li class="toctree-l1"><a class="reference internal" href="data_structures.html">Data Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="build_system.html">Build System</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rp_intro.html">Runtime parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fundamental_constants.html">Fundamental Constants</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">EOS and transport</span></p>
 <ul class="current">
@@ -344,20 +345,21 @@ a parameterization of the specific heat at constant volume:</p>
 </section>
 <section id="tillotson">
 <h2><code class="docutils literal notranslate"><span class="pre">tillotson</span></code><a class="headerlink" href="#tillotson" title="Link to this heading"></a></h2>
-<p>This is an equation of state for hypervelocity impacts based on <span id="id2">[<a class="reference internal" href="zreferences.html#id54" title="J. H. Tillotson. Metallic Equations of State for Hypervelocity Impact. Internal Report, General Atomics, 1962. URL: https://apps.dtic.mil/sti/citations/AD0486711.">8</a>]</span>.</p>
+<p>This is an equation of state for hypervelocity impacts based on <span id="id2">[<a class="reference internal" href="zreferences.html#id54" title="J. H. Tillotson. Metallic Equations of State for Hypervelocity Impact. Internal Report, General Atomics, 1962. URL: https://apps.dtic.mil/sti/citations/AD0486711.">8</a>]</span>.
+It can be used to model planetary impacts.</p>
 </section>
 <section id="ztwd">
 <h2><code class="docutils literal notranslate"><span class="pre">ztwd</span></code><a class="headerlink" href="#ztwd" title="Link to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">ztwd</span></code> is the zero-temperature degenerate electron equation
-of state of Chandrasekhar (1935), which is designed to describe
-white dward material. The pressure satisfies the equation:</p>
+of state of <span id="id3">Chandrasekhar [<a class="reference internal" href="zreferences.html#id58" title="Subrahmanyan Chandrasekhar. An introduction to the study of stellar structure. University of Chicago Press, 1939.">9</a>]</span>, which is designed to describe
+white dwarf material. The pressure satisfies the equation:</p>
 <div class="math notranslate nohighlight">
 \[p(x) = A \left( x(2x^2-3)(x^2 + 1)^{1/2} + 3\, \text{sinh}^{-1}(x) \right),\]</div>
 <p>with <span class="math notranslate nohighlight">\(A = \pi m_e^4 c^5 / (3 h^3)\)</span>. Here <span class="math notranslate nohighlight">\(x\)</span> is a dimensionless
 measure of the Fermi momentum, with <span class="math notranslate nohighlight">\(\rho = B x^3\)</span> and <span class="math notranslate nohighlight">\(B = 8\pi \mu_e
 m_p m_e^3 c^3 / (3h^3)\)</span>, where <span class="math notranslate nohighlight">\(\mu_e\)</span> is the mean molecular weight
 per electron and <span class="math notranslate nohighlight">\(h\)</span> is the Planck constant.</p>
-<p>The enthalpy was worked out by Hachisu (1986):</p>
+<p>The enthalpy was worked out by <span id="id4">Hachisu [<a class="reference internal" href="zreferences.html#id59" title="I. Hachisu. A Versatile Method for Obtaining Structures of Rapidly Rotating Stars. ApJS, 61:479, July 1986. doi:10.1086/191121.">10</a>]</span>:</p>
 <div class="math notranslate nohighlight">
 \[h(x) = \frac{8A}{B}\left(x^2 + 1\right)^{1/2}.\]</div>
 <p>(note the unfortunate notation here, but this <span class="math notranslate nohighlight">\(h\)</span> is specific
@@ -383,7 +385,7 @@ to find the density that matches this pressure.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, Microphysics Development Team.</p>
+    <p>&#169; Copyright 2025, Microphysics Development Team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
