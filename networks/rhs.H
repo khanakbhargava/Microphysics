@@ -1324,14 +1324,12 @@ void rhs (burn_t& burn_state, amrex::Array1D<amrex::Real, 1, nrhs>& ydot)
     // Evaluate the neutrino cooling.
     amrex::Real sneut = 0.0;
     amrex::Real dsneutdt = 0.0, dsneutdd = 0.0, dsnuda = 0.0, dsnudz = 0.0;
-    amrex::Real pair = 0.0, phot = 0.0, plas = 0.0, brem = 0.0;
 
 #ifdef NEUTRINOS
     constexpr int do_derivatives{0};
     neutrino_cooling<do_derivatives>(burn_state.T, burn_state.rho,
                                          burn_state.abar, burn_state.zbar,
-                                         sneut, dsneutdt, dsneutdd, dsnuda, dsnudz,
-                                         pair, phot, plas, brem);
+                                         sneut, dsneutdt, dsneutdd, dsnuda, dsnudz);
 #endif
 
     // Compute the energy RHS term.
@@ -1477,16 +1475,14 @@ void jac (burn_t& burn_state, ArrayUtil::MathArray2D<1, neqs, 1, neqs>& jac)
     // Evaluate the neutrino cooling.
     amrex::Real sneut = 0.0;
     amrex::Real dsneutdt = 0.0, dsneutdd = 0.0, dsnuda = 0.0, dsnudz = 0.0;
-    amrex::Real pair = 0.0, phot = 0.0, plas = 0.0, brem = 0.0;
 
 #ifdef NEUTRINOS
     constexpr int do_derivatives{1};
     neutrino_cooling<do_derivatives>(burn_state.T, burn_state.rho,
                                      burn_state.abar, burn_state.zbar,
-                                     sneut, dsneutdt, dsneutdd, dsnuda, dsnudz,
-                                     pair, phot, plas, brem);
+                                     sneut, dsneutdt, dsneutdd, dsnuda, dsnudz);
 #endif
-    amrex::ignore_unused(sneut, dsneutdd, pair, phot, plas, brem);
+    amrex::ignore_unused(sneut, dsneutdd);
 
     jac(net_ienuc, net_ienuc) = -temperature_to_energy_jacobian(burn_state, dsneutdt);
 
