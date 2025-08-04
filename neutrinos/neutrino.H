@@ -41,4 +41,25 @@ void neutrino_cooling(const number_t& temp, const amrex::Real dens,
 #endif
 }
 
+// simpler interface for when we do not care about the individual contributions
+template <int do_derivatives, typename number_t>
+AMREX_GPU_HOST_DEVICE AMREX_INLINE
+void neutrino_cooling(const number_t& temp, const amrex::Real dens,
+                      const number_t& abar, const number_t& zbar,
+                      number_t& sneut, number_t& dsneutdt,
+                      number_t& dsneutdd, number_t& dsnuda, number_t& dsnudz)
+{
+    amrex::Real pair, phot, plas, brem;
+
+#if NEUTRINO_METHOD == NEUTRINO_METHOD_kipp
+    kipp<do_derivatives>(temp, dens, abar, zbar,
+                         sneut, dsneutdt, dsneutdd, dsnuda, dsnudz,
+                         pair, phot, plas, brem);
+#elif NEUTRINO_METHOD == NEUTRINO_METHOD_sneut5
+    sneut5<do_derivatives>(temp, dens, abar, zbar,
+                           sneut, dsneutdt, dsneutdd, dsnuda, dsnudz,
+                           pair, phot, plas, brem);
+#endif
+}
+
 #endif // NEUTRINO_H

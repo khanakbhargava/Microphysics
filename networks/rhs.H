@@ -1328,8 +1328,8 @@ void rhs (burn_t& burn_state, amrex::Array1D<amrex::Real, 1, nrhs>& ydot)
 #ifdef NEUTRINOS
     constexpr int do_derivatives{0};
     neutrino_cooling<do_derivatives>(burn_state.T, burn_state.rho,
-                                         burn_state.abar, burn_state.zbar,
-                                         sneut, dsneutdt, dsneutdd, dsnuda, dsnudz);
+                                     burn_state.abar, burn_state.zbar,
+                                     sneut, dsneutdt, dsneutdd, dsnuda, dsnudz);
 #endif
 
     // Compute the energy RHS term.
