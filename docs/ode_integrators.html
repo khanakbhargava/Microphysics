@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ODE Integrators &mdash; Microphysics  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="_static/theme_overrides.css?v=2e394b92" />
 
@@ -16,13 +16,13 @@
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="_static/documentation_options.js?v=5929fcd5"></script>
-      <script src="_static/doctools.js?v=9bcbadda"></script>
-      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="_static/clipboard.min.js?v=a7894cd8"></script>
       <script src="_static/copybutton.js?v=eaa7b67c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
       <script>window.MathJax = {"tex": {"inlineMath": [["\\(", "\\)"]], "processEscapes": true, "displayMath": [["\\[", "\\]"]], "macros": {"rhozero": "{\\rho_0}", "pizero": "{\\pi_0}", "pizeroone": "{\\pi_0^{(1)}}", "pizerotwo": "{\\pi_0^{(2)}}", "gammabar": "{\\overline{\\Gamma}_1}", "ptl": "{{\\partial}}", "eb": "{{\\bf e}}", "fb": "{{\\bf f}}", "ib": "{{\\bf i}}", "Ub": "{{\\bf U}}", "Vb": "{{\\bf V}}", "xb": "{{\\bf x}}", "ut": "{\\tilde{u}}", "vt": "{\\tilde{v}}", "wt": "{\\tilde{w}}", "Ubt": "{\\widetilde{\\Ub}}", "edge": "{\\rm EDGE}", "mac": "{\\rm MAC}", "trans": "{\\rm TRANS}", "nablab": "{\\mathbf{\\nabla}}", "cdotb": "{\\mathbf{\\cdot}}", "half": "{\\frac{1}{2}}", "myhalf": "{\\frac{1}{2}}", "nph": "{{n + \\myhalf}}", "nmh": "{{n - \\myhalf}}", "Hext": "{{H_{\\rm ext}}}", "Hnuc": "{{H_{\\rm nuc}}}", "kth": "{k_{\\rm th}}", "pred": "{{\\rm pred}}", "Sbar": "{\\overline{S}}", "inp": "{\\mathrm{in}}", "initp": "{\\mathrm{init}}", "outp": "{\\mathrm{out}}", "uadv": "{\\widetilde{\\mathbf{U}}^{\\mathrm{ADV}}}", "uadvone": "{\\widetilde{\\mathbf{U}}^{\\mathrm{ADV},\\star}}", "uadvonedag": "{\\Ubt^{\\mathrm{ADV},\\dagger,\\star}}", "uadvtwo": "{\\widetilde{\\mathbf{U}}^{\\mathrm{ADV}}}", "uadvtwodag": "{\\Ubt^{\\mathrm{ADV},\\dagger}}", "uadvsdcstar": "{\\mathbf{U}^{\\mathrm{ADV},\\star}}", "uadvsdcpred": "{\\mathbf{U}^{\\mathrm{ADV},\\mathrm{pred}}}", "uadvsdc": "{\\mathbf{U}^{\\mathrm{ADV}}}", "dt": "{\\Delta t}", "dr": "{\\Delta r}", "etarho": "{\\eta_{\\rho}}", "etarhoec": "{\\etarho^{\\rm ec}}", "etarhocc": "{\\etarho^{\\rm cc}}", "etarhoflux": "{\\etarho^{\\rm flux}}", "divetarho": "{\\nabla\\cdot(\\etarho\\eb_r)}", "ow": "{\\overline{w}_0}", "dw": "{\\delta w_0}", "thalf": "{\\sfrac{3}{2}}", "rhop": "{{\\rho^{\\prime}}}", "omegadot": "{\\dot{\\omega}}", "er": "{\\mathbf{e}_r}", "ex": "{\\mathbf{e}_x}", "ey": "{\\mathbf{e}_y}", "ez": "{\\mathbf{e}_z}", "Omegab": "{{\\bf \\Omega}}", "rb": "{{\\bf r}}", "isotm": ["{{}^{#2}\\mathrm{#1}}", 2], "edot": "{{{\\dot{e}_\\mathrm{nuc}}}}", "enuc": "{{{{e}_\\mathrm{nuc}}}}", "edotnu": "{{{\\dot{e}_\\nu}}}", "rt": "{\\tilde{r}_0}", "rhob": "{\\ensuremath{\\rho_\\mathrm{base}}}", "Tb": "{\\ensuremath{T_\\mathrm{base}}}", "gcc": "{\\mathrm{g~cm^{-3} }}", "pb": "{p_\\mathrm{base}}", "qburn": "{q_\\mathrm{burn}}", "Uc": "{{\\boldsymbol{\\mathcal{U}}}}", "Fb": "{\\mathbf{F}}", "Sc": "{\\mathbf{S}}", "Shydro": "{{{\\bf S}^{\\mathrm{hydro}}}}", "Rb": "{{\\bf R}}", "Rbs": ["{{\\bf R} \\left ( #1 \\right )}", 1], "Rq": "{{\\bf R}}", "Adv": ["{{\\left [\\boldsymbol{\\mathcal{A}} \\left(#1\\right)\\right]}}", 1], "Advs": ["{{\\boldsymbol{\\mathcal{A}} \\left(#1\\right)}}", 1], "Sdot": "{\\dot{S}}"}}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -92,6 +92,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="nse.html">NSE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sdc.html">Spectral Deferred Corrections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="burn_failures.html">Dealing with Burn Failures</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Util / external libraries</span></p>
 <ul>
@@ -166,15 +167,15 @@ user can disable error estimation and force a single-step backward-Euler
 integration by setting <code class="docutils literal notranslate"><span class="pre">integrator.do_single_step</span> <span class="pre">=</span> <span class="pre">1</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ForwardEuler</span></code>: an explicit first-order forward-Euler method.  This is
 meant for testing purposes only.  No Jacobian is needed.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">QSS</span></code>: the quasi-steady-state method of <span id="id1">[<a class="reference internal" href="zreferences.html#id37" title="David R. Mott, Elaine S. Oran, and Bram van Leer. A quasi-steady-state solver for the stiff ordinary differential equations of reaction kinetics. Journal of Computational Physics, 164(2):407-428, 2000. doi:https://doi.org/10.1006/jcph.2000.6605.">42</a>]</span> (see also
-<span id="id2">[<a class="reference internal" href="zreferences.html#id38" title="M W Guidry and J A Harris. Explicit integration of extremely stiff reaction networks: quasi-steady-state methods. Computational Science &amp; Discovery, 6(1):015002, jan 2013. URL: https://dx.doi.org/10.1088/1749-4699/6/1/015002, doi:10.1088/1749-4699/6/1/015002.">43</a>]</span>). This uses a second-order predictor-corrector method,
+<li><p><code class="docutils literal notranslate"><span class="pre">QSS</span></code>: the quasi-steady-state method of <span class="bibtex-citation" id="id1">[<a class="reference internal" href="zreferences.html#id37" title="David R. Mott, Elaine S. Oran, and Bram van Leer. A quasi-steady-state solver for the stiff ordinary differential equations of reaction kinetics. Journal of Computational Physics, 164(2):407-428, 2000. doi:https://doi.org/10.1006/jcph.2000.6605.">42</a>]</span> (see also
+<span class="bibtex-citation" id="id2">[<a class="reference internal" href="zreferences.html#id38" title="M W Guidry and J A Harris. Explicit integration of extremely stiff reaction networks: quasi-steady-state methods. Computational Science &amp; Discovery, 6(1):015002, jan 2013. URL: https://dx.doi.org/10.1088/1749-4699/6/1/015002, doi:10.1088/1749-4699/6/1/015002.">43</a>]</span>). This uses a second-order predictor-corrector method,
 and is designed specifically for handling coupled ODE systems for chemical
 and nuclear reactions. However, this integrator has difficulty near NSE,
 so we don’t recommend its use in production for nuclear astrophysics.</p></li>
 </ul>
 <ul id="index-1">
 <li><p><code class="docutils literal notranslate"><span class="pre">RKC</span></code>: a stabilized explicit Runge-Kutta-Chebyshev integrator based
-on <span id="id3">[<a class="reference internal" href="zreferences.html#id44" title="B.P. Sommeijer, L.F. Shampine, and J.G. Verwer. RKC: An explicit solver for parabolic PDEs. Journal of Computational and Applied Mathematics, 88(2):315–326, March 1998. URL: https://linkinghub.elsevier.com/retrieve/pii/S0377042797002197, doi:10.1016/S0377-0427(97)00219-7.">44</a>]</span>.  This does not require a Jacobian, but
+on <span class="bibtex-citation" id="id3">[<a class="reference internal" href="zreferences.html#id44" title="B.P. Sommeijer, L.F. Shampine, and J.G. Verwer. RKC: An explicit solver for parabolic PDEs. Journal of Computational and Applied Mathematics, 88(2):315–326, March 1998. URL: https://linkinghub.elsevier.com/retrieve/pii/S0377042797002197, doi:10.1016/S0377-0427(97)00219-7.">44</a>]</span>.  This does not require a Jacobian, but
 does need to estimate the spectral radius of the system, which is
 done internally.  This works for moderately stiff problems.</p>
 <p>The spectral radius is estimated by default using the power method,
@@ -184,7 +185,26 @@ is used instead.</p>
 </li>
 </ul>
 <ul id="index-2">
-<li><p><code class="docutils literal notranslate"><span class="pre">VODE</span></code>: the VODE <span id="id4">[<a class="reference internal" href="zreferences.html#id26" title="P. N. Brown, G. D. Byrne, and A. C. Hindmarsh. VODE: a variable coefficient ode solver. SIAM J. Sci. Stat. Comput., 10:1038-1051, 1989.">45</a>]</span> integration package.  We ported this
+<li><p><code class="docutils literal notranslate"><span class="pre">Rosenbrock</span></code>: this implements several different Rosenbrock implicit
+methods for stiff ODEs.  Several different methods can be selected through
+the runtime parameter <code class="docutils literal notranslate"><span class="pre">integrator.rosenbrock_tableau</span></code>.  The
+allowed values are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> : Rodas5P method (this is the default), based on the
+Julia implementation in <a class="reference external" href="https://github.com/SciML/DifferentialEquations.jl">DifferentialEquations.jl</a>
+<span class="bibtex-citation" id="id4">[<a class="reference internal" href="zreferences.html#id69" title="Gerhard Steinebach. Construction of rosenbrock–wanner method rodas5p and numerical benchmarks within the julia differential equations package. BIT Numerical Mathematics, 2023. URL: https://doi.org/10.1007/s10543-023-00967-x, doi:10.1007/s10543-023-00967-x.">45</a>]</span>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> : Rodas4P method from <code class="docutils literal notranslate"><span class="pre">DifferentialEquations.jl</span></code> (they give <span class="bibtex-citation" id="id5">[<a class="reference internal" href="zreferences.html#id70" title="G. Steinebach. Order-reduction of row-methods for daes and method of lines applications. unpublished / preprint, 1995.">46</a>]</span> as a reference).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> : Rodas3P method from <code class="docutils literal notranslate"><span class="pre">DifferentialEquations.jl</span></code>  (see a <a class="reference external" href="https://github.com/hbrs-cse/RosenbrockMethods/blob/main/paper/JuliaPaper.pdf">juliacon preprint</a>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> : ROS2S method, a 2nd order, stiff-accurate method <span class="bibtex-citation" id="id6">[<a class="reference internal" href="zreferences.html#id71" title="Ahmad-Wahadj Hamkar, Stefan Hartmann, and Joachim Rang. A stiffly accurate rosenbrock-type method of order 2 applied to fe-analyses in finite strain viscoelasticity. Applied Numerical Mathematics, 62(12):1837-1848, 2012. URL: https://www.sciencedirect.com/science/article/pii/S016892741200133X, doi:https://doi.org/10.1016/j.apnum.2012.08.001.">47</a>]</span>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code> : ROS2 method, a 2nd order, L-stable method <span class="bibtex-citation" id="id7">[<a class="reference internal" href="zreferences.html#id72" title="J. G. Verwer, E. J. Spee, J. G. Blom, and W. Hundsdorfer. A Second-Order Rosenbrock Method Applied to Photochemical Dispersion Problems. SIAM Journal on Scientific Computing, 20(4):1456-1480, January 1999. doi:10.1137/S1064827597326651.">48</a>]</span>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">5</span></code> : a first-order method based on the YASS method (described in <span class="bibtex-citation" id="id8">[<a class="reference internal" href="zreferences.html#id74" title="A. Khokhlov, I. Domínguez, C. Bacon, B. Clifford, E. Baron, P. Hoeflich, K. Krisciunas, N. Suntzeff, and L. Wang. Three-dimensional Simulations of Thermonuclear Detonation with \ensuremath \alpha -Network: Numerical Method and Preliminary Results. In R. Capuzzo-Dolcetta, M. Limongi, and A. Tornambè, editors, Advances in Computational Astrophysics: Methods, Tools, and Outcome, volume 453 of Astronomical Society of the Pacific Conference Series, 107. July 2012.">49</a>]</span>).</p></li>
+</ul>
+<p>Here the “P” suffix refers to methods developed to satisfy the stiff
+accuracy conditions of <span class="bibtex-citation" id="id9">[<a class="reference internal" href="zreferences.html#id73" title="A. Prothero and A. Robinson. On the stability and accuracy of one-step methods for solving stiff systems of ordinary differential equations. Mathematics of Computation, 28(125):145–162, January 1974. URL: https://doi.org/10.1090/S0025-5718-1974-0331793-2, doi:10.1090/S0025-5718-1974-0331793-2.">50</a>]</span> (ROS2S also satisfies
+these).</p>
+<p>By default, the H211b error-history timestep controller from <span class="bibtex-citation" id="id10">[<a class="reference internal" href="zreferences.html#id75" title="Gustaf Söderlind. Digital filters in adaptive time-stepping. ACM Trans. Math. Softw., 29(1):1–26, March 2003. URL: https://doi.org/10.1145/641876.641877, doi:10.1145/641876.641877.">51</a>]</span> (see Eq. 31) is used, but the YASS heuristic method can be used instead by setting <code class="docutils literal notranslate"><span class="pre">integrator.rosenbrock_timestep_controller=1</span></code>.</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">VODE</span></code>: the VODE <span class="bibtex-citation" id="id11">[<a class="reference internal" href="zreferences.html#id26" title="P. N. Brown, G. D. Byrne, and A. C. Hindmarsh. VODE: a variable coefficient ode solver. SIAM J. Sci. Stat. Comput., 10:1038-1051, 1989.">52</a>]</span> integration package.  We ported this
 integrator to C++ and removed the non-stiff integration code paths.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -231,9 +251,20 @@ is done using <code class="docutils literal notranslate"><span class="pre">conse
 <p id="index-4">For the other networks (usually pynucastro networks), the implementation is
 provided in <code class="docutils literal notranslate"><span class="pre">Microphysics/util/linpack.H</span></code> and is templated on the number
 of equations.  Pivoting can be disabled by setting <code class="docutils literal notranslate"><span class="pre">integrator.linalg_do_pivoting=0</span></code>.</p>
+<div class="admonition tip" id="index-5">
+<p class="admonition-title">Tip</p>
+<p>The storage for the Jacobian can take up the most memory when
+integrating the reaction system.  It is possible to store the
+Jacobian as single-precision, by building with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">USE_SINGLE_PRECISION_JACOBIAN</span><span class="o">=</span><span class="n">TRUE</span>
+</pre></div>
+</div>
+<p>This can speed up the integration prevent the code from running out
+of memory when run on GPUs.</p>
+</div>
 </section>
 <section id="integration-errors">
-<h2>Integration errors<a class="headerlink" href="#integration-errors" title="Link to this heading"></a></h2>
+<span id="sec-error-codes"></span><h2>Integration errors<a class="headerlink" href="#integration-errors" title="Link to this heading"></a></h2>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>The integrator will not abort if it encounters trouble.  Instead it will
@@ -280,13 +311,18 @@ used to interpret the failure.  The current codes are:</p>
 </table>
 </section>
 <section id="tolerances">
-<h2>Tolerances<a class="headerlink" href="#tolerances" title="Link to this heading"></a></h2>
+<span id="sec-tolerances"></span><h2>Tolerances<a class="headerlink" href="#tolerances" title="Link to this heading"></a></h2>
 <p>Tolerances dictate how accurate the ODE solver must be while solving
 equations during a simulation.  Typically, the smaller the tolerance
 is, the more accurate the results will be.  However, if the tolerance
 is too small, the code may run for too long, the ODE solver will
 never converge, or it might require at timestep that underflows.</p>
-<p id="index-5">There are separate tolerances for the mass fractions and the energy,
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The <a class="reference external" href="https://sundials.readthedocs.io/en/latest/cvode/Usage/index.html#general-advice-on-choice-of-tolerances">SUNDIALS CVODE documentation on tolerances</a>
+provides a good discussion on tolerances that apply here.</p>
+</div>
+<p id="index-6">There are separate tolerances for the mass fractions and the energy,
 and there are both relative and absolute tolerances which act together.
 The tolerances are:</p>
 <ul class="simple">
@@ -310,7 +346,7 @@ best served via a relative tolerance.</p></li>
 will set the error that the integrator tries to achieve.  If the mass fraction
 is large, <span class="math notranslate nohighlight">\(\mathcal{O}(1)\)</span>, then the relative tolerance dominates.</p>
 <p>Some suggestions when setting tolerances:</p>
-<ul class="simple" id="index-6">
+<ul class="simple" id="index-7">
 <li><p>If a burn does not converge with one type of Jacobian (analytic or
 numerical) then it may do better with the other type.  This can be
 automated via the <code class="docutils literal notranslate"><span class="pre">integrator.use_burn_retry</span></code> mechanism described
@@ -321,7 +357,7 @@ species better which can help with equilibrium better.</p></li>
 <li><p>The VODE integrator has additional logic meant to ensure that
 species don’t change too much per timestep.  This is controlled by
 <code class="docutils literal notranslate"><span class="pre">integrator.X_reject_buffer</span></code>.  If a species <span class="math notranslate nohighlight">\(k\)</span>, has a mass
-fraction <span class="math notranslate nohighlight">\(X_k &gt; \mbox{X_reject_buffer} \cdot \mbox{atol_spec}\)</span> then
+fraction <span class="math notranslate nohighlight">\(X_k &gt; \mbox{X\_reject\_buffer} \cdot \mbox{atol\_spec}\)</span> then
 we reject a VODE timestep if the mass fraction changes by more than
 a factor of 4 in a single VODE timestep and we try again.  This is
 all done internally to VODE.  Making <code class="docutils literal notranslate"><span class="pre">X_reject_buffer</span></code> larger will
@@ -333,12 +369,12 @@ runs were done, using tolerances of <span class="math notranslate nohighlight">\
 (all 4 tolerance parameters were set to the same value).  The run with the tightest
 tolerances (<span class="math notranslate nohighlight">\(10^{-12}\)</span>) was taken as the reference and relative errors were
 computed with respect to it.  The scripts for this are in <code class="docutils literal notranslate"><span class="pre">Microphysics/unit_test/burn_cell/compare_tolerances/</span></code>.</p>
-<figure class="align-default" id="id5">
+<figure class="align-default" id="id12">
 <span id="fig-tolerances"></span><a class="reference internal image-reference" href="_images/tolerance-compare.png"><img alt="Relative error in mass fractions" src="_images/tolerance-compare.png" style="width: 100%;" />
 </a>
 <figcaption>
 <p><span class="caption-number">Fig. 1 </span><span class="caption-text">Relative error of runs with varying tolerances as compared
-to a run with an ODE tolerance of <span class="math notranslate nohighlight">\(10^{-12}\)</span>.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+to a run with an ODE tolerance of <span class="math notranslate nohighlight">\(10^{-12}\)</span>.</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>We see that using a tolerance of <span class="math notranslate nohighlight">\(10^{-5}\)</span> generally gives reasonable mass
@@ -346,7 +382,7 @@ fractions.  Looser than this can produce large errors.</p>
 </section>
 <section id="controlling-species-sum-k-x-k-1">
 <h2>Controlling Species <span class="math notranslate nohighlight">\(\sum_k X_k = 1\)</span><a class="headerlink" href="#controlling-species-sum-k-x-k-1" title="Link to this heading"></a></h2>
-<p id="index-7">The ODE integrators don’t know about the constraint that</p>
+<p id="index-8">The ODE integrators don’t know about the constraint that</p>
 <p><div class="math notranslate nohighlight">
 \[\sum_k X_k = 1\]</div>
 </p>
@@ -368,14 +404,22 @@ fractions stay positive and larger than some floor <code class="docutils literal
 <li><p><code class="docutils literal notranslate"><span class="pre">integrator.SMALL_X_SAFE</span></code> : this is the floor on the mass fractions.
 The default is <code class="docutils literal notranslate"><span class="pre">1.e-30</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">integrator.do_species_clip</span></code> : this enforces that the mass fractions
-all in <span class="math notranslate nohighlight">\([\mathtt{SMALL\_X\_SAFE}, 1.0]\)</span>.</p>
-<p>This is enabled by default.</p>
+all in <span class="math notranslate nohighlight">\([\mathtt{SMALL\_X\_SAFE}, 1.0]\)</span> before calling the network righthand
+side function.</p>
+<p>This is off by default.  Turning this on can sometimes make the integrator
+work a lot harder.</p>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">integrator.do_corrector_validation</span></code> : in the nonlinear solve
+corrector loop, when we get a corrected integration state, do we
+check to make sure the mass fractions are valid before calling the
+righthand function?  This is needed in some cases if
+<code class="docutils literal notranslate"><span class="pre">integrator.do_species_clip</span></code> is disabled.  Note: this is not
+implemented for every integrator.</p></li>
 </ul>
 </section>
 <section id="retry-mechanism">
-<h2>Retry Mechanism<a class="headerlink" href="#retry-mechanism" title="Link to this heading"></a></h2>
-<p id="index-8">Integration can fail for a number of reasons.  Some of the errors you may see are:</p>
+<span id="sec-retry"></span><h2>Retry Mechanism<a class="headerlink" href="#retry-mechanism" title="Link to this heading"></a></h2>
+<p id="index-9">Integration can fail for a number of reasons.  Some of the errors you may see are:</p>
 <ol class="arabic simple">
 <li><p>Not enough steps allowed (<code class="docutils literal notranslate"><span class="pre">integrator.ode_max_steps</span></code>)</p></li>
 <li><p>The timestep selected by the integrator is too small (comparable to
